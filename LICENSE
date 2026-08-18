@@ -1,0 +1,20 @@
+PROPRIETARY LICENSE
+
+Copyright (c) 2025 SVRALABS
+
+All rights reserved.
+
+This software and its associated documentation files (the "Software") are the proprietary property of SVRALABS. No part of this Software may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of SVRALABS, except as expressly permitted below.
+
+Permitted Uses:
+- Internal use by SVRALABS employees and authorized contractors
+- Deployment to SVRALABS production environments
+- Modification for SVRALABS internal projects
+
+Prohibited Uses:
+- Redistribution, sale, or licensing to third parties
+- Public repository hosting (except private SVRALABS repositories)
+- Reverse engineering, decompilation, or disassembly
+- Creation of derivative works for external distribution
+
+This Software is provided "AS IS" without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall SVRALABS be liable for any claim, damages, or other liability arising from the use of this Software.

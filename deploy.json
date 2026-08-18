@@ -1,0 +1,7 @@
+{
+  "target": "cloudflare",
+  "project_name": "svralabs-atlas",
+  "domain": "atlas.app.svralabs.com",
+  "output_dir": "dist",
+  "framework": "vite"
+}
