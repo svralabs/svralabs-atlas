@@ -1,23 +1,24 @@
-import React from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function RivrFluidAssetStreams() {
-  const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full min-h-screen text-slate-100 font-sans">
       
 <main className="min-h-screen">
-{/*  BEGIN: HeroSection  */}
+
 <div className="w-full h-screen flex items-center justify-center p-3 md:p-5">
 <section className="relative w-full max-w-[1536px] h-full rounded-[1.5rem] md:rounded-[3rem] overflow-hidden flex flex-col items-center bg-white/10">
-{/*  Background Media  */}
+
 <img alt="Dark navy blue fluid abstract background" className="absolute inset-0 w-full h-full object-cover object-[65%] lg:object-center z-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLcUgwrPVSBMUsRtv0YTbSljDYCxFAY7S7-58aO8o9q_p7lBv13RkcAwyU6gtnPwvmQJnie47gHw2UOXIwuZbNMMZVSakcHT4_61LmRDRMfIF3WaDHpl4YQVqNIwmFXEiToIjlqu5BWks33NpBcY-2mPaeNpGSTxY3k_sHE5el7bjt1ka_y3EBdXixOPhmvqJt2MmWPMGyQmlIZfGa3LMZe3AWbpZVccYmT3Ng5CoPx7ZiQpSazncBsw"/>
-{/*  Legibility Overlay  */}
-<div className="absolute inset-0 z-[5]" style={{ "background": "linear-gradient(180deg, var(--hero-overlay) 0%, var(--hero-overlay) 55%, var(--hero-overlay-bottom) 100%)" }}></div>
-{/*  Foreground Content  */}
+
+<div className="absolute inset-0 z-[5]" style={{"background": "linear-gradient(180deg, var(--hero-overlay) 0%, var(--hero-overlay) 55%, var(--hero-overlay-bottom) 100%)"}}></div>
+
 <div className="relative z-10 w-full h-full flex flex-col items-center">
-{/*  Navigation  */}
+
 <nav className="flex items-center justify-between py-6 px-6 md:px-10 w-full relative z-10" data-purpose="primary-nav">
 <div className="flex-1 hidden md:block"></div>
 <ul className="hidden md:flex items-center gap-8 text-white/85 font-normal text-sm">
@@ -36,11 +37,11 @@ export default function RivrFluidAssetStreams() {
 <i className="w-4 h-4 transition-transform group-hover/item:translate-x-0.5" data-lucide="chevron-right"></i>
 </li>
 </ul>
-{/*  Mobile Logo Placeholder  */}
+
 <div className="md:hidden">
 <span className="font-regular tracking-tighter text-xl text-white">RIVR</span>
 </div>
-{/*  CTA Button  */}
+
 <div className="flex-1 flex justify-end">
 <button className="btn-hover flex items-center bg-white/95 text-[rgba(30,50,90,0.95)] rounded-full pl-2 pr-4 md:pr-6 py-1.5 md:py-2 gap-2 md:gap-3 hover:bg-white transition-colors group">
 <div className="bg-[rgba(30,50,90,0.1)] p-1 md:p-1.5 rounded-full flex items-center justify-center">
@@ -50,7 +51,7 @@ export default function RivrFluidAssetStreams() {
 </button>
 </div>
 </nav>
-{/*  Hero Text  */}
+
 <div className="w-full flex flex-col items-center pt-8 px-6 text-center max-w-4xl" data-purpose="hero-copy">
 <div className="anim-badge flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mx-auto mb-3 w-fit">
 <i className="w-4 h-4 text-white" data-lucide="sparkles"></i>
@@ -63,7 +64,7 @@ export default function RivrFluidAssetStreams() {
             Access Smart Vaults, stake RIVR, NFTs, transform rigid holdings into liquid cash instantly.
           </p>
 </div>
-{/*  Floating Stats Card  */}
+
 <div className="anim-left absolute bottom-28 right-4 left-auto md:left-6 md:right-auto md:bottom-6 lg:bottom-10 lg:left-10 p-3 md:p-4 lg:p-5 rounded-[1.2rem] md:rounded-[1.5rem] lg:rounded-[2.2rem] bg-white/10 backdrop-blur-xl border border-white/15 flex flex-col gap-2 lg:gap-3 min-w-[140px] md:min-w-[150px] lg:min-w-[180px] w-fit">
 <div className="flex flex-col">
 <span className="text-2xl md:text-3xl font-normal text-[color:var(--hero-heading)] tracking-tight">5.2K</span>
@@ -76,9 +77,9 @@ export default function RivrFluidAssetStreams() {
 <span className="text-[14px] font-normal text-[rgba(30,50,90,0.9)]">Join Discord</span>
 </button>
 </div>
-{/*  Documentation Corner  */}
+
 <div className="anim-corner absolute bottom-0 right-0 p-3 pt-5 pl-8 sm:p-4 sm:pt-6 sm:pl-10 md:p-6 md:pt-8 md:pl-14 bg-[#f0f0f0] rounded-tl-[1.5rem] sm:rounded-tl-[2rem] md:rounded-tl-[3.5rem] flex items-center gap-3 sm:gap-4 md:gap-6">
-{/*  Curve masks for corner integration  */}
+
 <div className="absolute -top-[1.5rem] sm:-top-[2rem] md:-top-[3.5rem] right-0 w-[1.5rem] sm:w-[2rem] md:w-[3.5rem] h-[1.5rem] sm:h-[2rem] md:h-[3.5rem] pointer-events-none">
 <svg fill="none" height="100%" viewbox="0 0 56 56" width="100%" xmlns="http://www.w3.org/2000/svg">
 <path d="M56 56V0C56 30.9279 30.9279 56 0 56H56Z" fill="#f0f0f0"></path>
@@ -103,8 +104,8 @@ export default function RivrFluidAssetStreams() {
 </div>
 </section>
 </div>
-{/*  END: HeroSection  */}
-{/*  BEGIN: StatisticsBar  */}
+
+
 <div className="w-full px-3 md:px-5 pb-3 md:pb-5">
 <div className="reveal w-full max-w-[1536px] mx-auto rounded-[1.5rem] md:rounded-[2.5rem] bg-white/40 backdrop-blur-xl border border-white/40 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-4 px-6 sm:px-10 py-8 sm:py-10">
 <div className="flex flex-col items-center sm:items-start">
@@ -128,11 +129,11 @@ export default function RivrFluidAssetStreams() {
 </div>
 </div>
 </div>
-{/*  END: StatisticsBar  */}
-{/*  BEGIN: SmartVaultsSection  */}
+
+
 <div className="w-full px-3 md:px-5 pb-3 md:pb-5">
 <div className="w-full max-w-[1536px] mx-auto">
-{/*  Header Content  */}
+
 <div className="reveal flex flex-col items-center text-center max-w-2xl mx-auto mb-8 md:mb-12 px-4">
 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/20 mb-4 w-fit">
 <i className="w-4 h-4 text-[rgba(30,50,90,0.8)]" data-lucide="layers"></i>
@@ -141,9 +142,9 @@ export default function RivrFluidAssetStreams() {
 <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal text-[#5E6470] tracking-tight leading-[1.1] mb-3">Every asset, kept in motion</h2>
 <p className="text-sm sm:text-base text-[#5E6470] opacity-80 leading-relaxed font-normal">Three ways to turn what you hold into liquidity you can use, without ever selling the underlying position.</p>
 </div>
-{/*  Feature Grid  */}
+
 <div className="reveal grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 px-4">
-{/*  Card 1: Stake & Stream  */}
+
 <div className="card-hover rounded-[1.5rem] md:rounded-[2rem] bg-white/40 backdrop-blur-xl border border-white/40 overflow-hidden flex flex-col">
 <div className="relative h-36 md:h-40 w-full overflow-hidden">
 <img alt="Fluid blue liquid texture" className="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCZLyVz4AeIyfj3pJjyPsiOiL0hXQECmLiP5GWtfuWtjJaTmIqXUhHqeYJ1dSBh5ibrntFylXOcVzUfkF1e1Shqj3oryeOlJgEK8aoJVTfmoDHAoXHyDunybTH6ppp-bXfiOQ730fpjyoydBdtMv5fiWHxpiWFkTFdHPu0Q8NoMTQrX17nYbxhvuHcvcocQ-kQW8q6Cre9ExF1BwoiJIo49LBwO-PSLqEKfQ8I7Xh9RRkklmOMn2iHuA"/>
@@ -156,7 +157,7 @@ export default function RivrFluidAssetStreams() {
 <p className="text-sm text-[rgba(30,50,90,0.6)] leading-relaxed font-normal">Stake RIVR and let yield stream into your wallet continuously, no manual claiming required.</p>
 </div>
 </div>
-{/*  Card 2: NFT-Backed Liquidity  */}
+
 <div className="card-hover rounded-[1.5rem] md:rounded-[2rem] bg-white/40 backdrop-blur-xl border border-white/40 overflow-hidden flex flex-col">
 <div className="relative h-36 md:h-40 w-full overflow-hidden">
 <img alt="Translucent glass texture" className="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpr4LyRbFryQVYk3iYaQz3btQtAyec0wp4Iyw_XXN2lZJRaRQCHdM0XTKMjah9uznhU1RFDirfRZCVxzv4oXI7C2H4TZGIv87bDGpZo208DQpOpC-ouXqbkUUkqoMseCH_t8HkQoQRhsWi0cfQrYTeKgylt2JWx7zX3zNJfB6pYh7pJZz4CXA63fATHEJRMgDtZCxhdaiwT2ea_QDo_XAojvX9cwOg7DJ0ErNcrnaIMwxsbz7WfybWoA"/>
@@ -169,7 +170,7 @@ export default function RivrFluidAssetStreams() {
 <p className="text-sm text-[rgba(30,50,90,0.6)] leading-relaxed font-normal">Deposit blue-chip NFTs as collateral and unlock stablecoin liquidity instantly.</p>
 </div>
 </div>
-{/*  Card 3: Cross-Chain Vaults  */}
+
 <div className="card-hover rounded-[1.5rem] md:rounded-[2rem] bg-white/40 backdrop-blur-xl border border-white/40 overflow-hidden flex flex-col">
 <div className="relative h-36 md:h-40 w-full overflow-hidden">
 <img alt="Minimalist geometric shapes" className="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt0Davo2XOR3BNf5skFViznWx27xOVViHuW_CTigM7wNVHIPv5HrWTw5gM0Ea27C4IV8ZGB8nHVDs8lMs5RTlbI3fPlNuBrJL9PhLB_0ecWuW8GiJ_EUhw0tB16YfEoKQJ1i3fv0JExQpZAHxHNO8de1-j1wxvLDsMZM6xLenXRFh01MBDajzMM_LPqCxokXyLVf6d_UZt2VxbRgDAbRpIWQ9lYSrp34hA5xSpGAxisoPYYGOknK8rQA"/>
@@ -185,8 +186,8 @@ export default function RivrFluidAssetStreams() {
 </div>
 </div>
 </div>
-{/*  END: SmartVaultsSection  */}
-{/*  BEGIN: HowItWorks  */}
+
+
 <div className="w-full px-3 md:px-5 pb-3 md:pb-5">
 <div className="reveal w-full max-w-[1536px] mx-auto rounded-[1.5rem] md:rounded-[2.5rem] bg-white/30 backdrop-blur-xl border border-white/40 p-6 md:p-12">
 <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-8 md:mb-12">
@@ -221,8 +222,8 @@ export default function RivrFluidAssetStreams() {
 </div>
 </div>
 </div>
-{/*  END: HowItWorks  */}
-{/*  BEGIN: LiveVaultsTable  */}
+
+
 <div className="w-full px-3 md:px-5 pb-3 md:pb-5">
 <div className="reveal w-full max-w-[1536px] mx-auto rounded-[1.5rem] md:rounded-[2.5rem] bg-white/40 backdrop-blur-xl border border-white/40 p-6 md:p-10">
 <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6 md:mb-8">
@@ -289,8 +290,8 @@ export default function RivrFluidAssetStreams() {
 </div>
 </div>
 </div>
-{/*  END: LiveVaultsTable  */}
-{/*  BEGIN: CTABanner  */}
+
+
 <div className="w-full px-3 md:px-5 pb-3 md:pb-5">
 <div className="reveal relative w-full max-w-[1536px] mx-auto rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden flex items-center justify-center min-h-[320px] md:min-h-[380px]">
 <img alt="Dark navy abstract gradient background" className="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6QVm932pSgYHIVN1uJpAufWpbD9CD9Y-Tf7FwU_I6YqQsX-vEfU71JPbigw-ZIQSJup5togXXeibWlzOnE52t8HLBJFb6mKVg5ef5oIdqFhC4Kopbn_BMhy6KzGeniXiOKvjV8QhypPvxEgFup1oBJwC_HAhF-9ORT7QZxGOAnDQx42MHM06QfrsdtSSWUSDFtSAOxfeaeYHo_900eoK0yJWb18PpI2t-dpLWKCcIb_wDSmSzbhVUPQ"/>
@@ -311,12 +312,12 @@ export default function RivrFluidAssetStreams() {
 </div>
 </div>
 </div>
-{/*  END: CTABanner  */}
-{/*  BEGIN: Footer  */}
+
+
 <footer className="w-full px-3 md:px-5 pb-6 md:pb-10">
 <div className="w-full max-w-[1536px] mx-auto rounded-[1.5rem] md:rounded-[2.5rem] bg-white/30 backdrop-blur-xl border border-white/40 px-6 md:px-10 py-8 md:py-10 flex flex-col gap-8">
 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
-{/*  Brand and Socials  */}
+
 <div className="flex flex-col gap-3 max-w-xs">
 <span className="font-regular tracking-tighter text-2xl text-[rgba(30,50,90,0.9)]">RIVR</span>
 <p className="text-sm text-[rgba(30,50,90,0.6)] leading-relaxed font-normal">Fluid asset streams for the on-chain economy. Smart Vaults, staking, and NFT liquidity in one place.</p>
@@ -332,7 +333,7 @@ export default function RivrFluidAssetStreams() {
 </a>
 </div>
 </div>
-{/*  Links Grid  */}
+
 <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
 <div className="flex flex-col gap-3">
 <span className="text-[12px] uppercase tracking-wider text-[rgba(30,50,90,0.5)] font-normal">Ecosystem</span>
@@ -358,7 +359,7 @@ export default function RivrFluidAssetStreams() {
 </div>
 </div>
 <div className="w-full h-px bg-[rgba(30,50,90,0.1)]"></div>
-{/*  Legal and Copyright  */}
+
 <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
 <span className="text-xs text-[rgba(30,50,90,0.5)] font-normal">© 2026 RIVR. All rights reserved.</span>
 <div className="flex items-center gap-5">
@@ -368,12 +369,12 @@ export default function RivrFluidAssetStreams() {
 </div>
 </div>
 </footer>
-{/*  END: Footer  */}
+
 </main>
-{/*  BEGIN: ScriptHandlers  */}
 
 
-{/*  END: ScriptHandlers  */}
+
+
 
     </div>
   );

@@ -1,0 +1,13 @@
+{
+  "project_name": "svralabs-atlas",
+  "status": "ACTIVE",
+  "tickets": [
+    {
+      "id": "TASK-006",
+      "title": "Wire interactive search & dynamic category tabs to local state",
+      "description": "Connect category tabs and search bar in Atlas portfolio to dynamic filter state and sample JSON data.",
+      "status": "QUEUED",
+      "priority": "HIGH"
+    }
+  ]
+}
